@@ -1,0 +1,187 @@
+.table_header {
+    border: 1px solid #CCC;
+    table-layout: fixed;
+    /*border-bottom: 0;    */
+    /*background-color: #D7D7D7;*/
+    background-color: #ebf7df;
+}
+.default_style .table_header{
+    background-color: #1CC6A3;   
+}
+.no_default_style .table_header{
+    /*background-color: #FFF;*/
+    border: 0;    
+}
+.table_body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #CCC;
+    border-top: 0;
+    padding-bottom: 1px;
+}
+table.gridtable {
+    font-family: "微软雅黑","verdana","arial",sans-serif;   
+    color:#333;
+    width: 100%;
+    border-collapse: collapse;
+}
+table.gridtable thead th {
+    border-width: 1px;
+    padding: 6px 8px;
+    font-size: 16px;
+    font-size: 1rem;
+    color: #333;
+    /*background-color: #D7D7D7;*/
+    background-color: #ebf7df;
+    cursor: default;
+}
+.default_style table.gridtable thead th {
+    color: #333;
+    background-color: #ebf7df;
+}
+/*.default_style table.gridtable thead th{
+    color: #FFF; 
+    background-color: #1CC6A3;     
+}*/
+.no_default_style .gridtable thead th{
+    border: 1px solid #CCC;    
+    /*background-color: #FFF; */
+    border-bottom: 0;  
+    border-right: 0; 
+}
+.no_default_style .gridtable thead th:last-child{
+     border-right: 1px solid #CCC;
+}
+.gridtable thead th.last{
+    border-right: 1px solid #CCC;  
+}
+table.gridtable tbody td{    
+    font-size:15px;  
+    font-size:.9375rem; 
+    padding: 6px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCC;
+    border-top-width: 0;
+    border-right-width: 0;
+    background-color: #FFF;
+    min-height: 23px; 
+}
+table.gridtable tbody td>div{   
+    display:inline-block;
+}
+table.gridtable tbody .tr_odd td {
+    background-color: #FFF;
+}
+table.gridtable tbody .tr_even td {
+    background-color: #F3F3F3;
+}
+table.gridtable tbody .tr_selected td{    
+    border-color: #CCC;
+    /*color: #4abfa2;
+    background-color:#f3f8f7; */
+    color: #3D85DA;
+}
+table.gridtable tbody td select{
+    border: 0;
+    color: #3D85DA;
+    outline: none;
+}
+table.gridtable tbody td .td_text{     
+    display:inline;
+    margin-left: 10px;
+    margin-left: .625rem;
+}
+table.gridtable thead th .cb_normal,table.gridtable tbody td .cb_normal{ 
+    width: 20px;
+    width: 1.25rem;
+    height: 20px;
+    height: 1.25rem;
+    margin-left: 5px;
+    margin-left: .3125rem;
+    margin-right: 5px;
+    margin-right: .3125rem;
+    background-image: url('images/cb_normal.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+table.gridtable tbody td .link:hover{ 
+    cursor: pointer;   
+    text-decoration:underline;
+}
+table.gridtable tbody td span.button{ 
+    cursor: pointer;   
+    background-color: #F76C6C;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px 3px;
+    color:#EEE;
+}
+table.gridtable tbody td .cb_normal_no{    
+    background-image: url('images/cb_normal_no.png');
+}
+table.gridtable thead th .cb_checked,table.gridtable tbody td .cb_checked{    
+    background-image: url('images/cb_select.png');    
+}
+table.gridtable tbody td.td_edit, table.gridtable tbody td .td_edit{
+    width: 100%;
+    height: 18px;
+    height: 1.125rem;
+    background-image: url('images/edit.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor:pointer;
+}
+table.gridtable tbody td .td_select{
+    width: 20px;
+    width: 1.25rem;
+    height: 20px;
+    height: 1.25rem;
+    background-image: url('images/select.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+table.gridtable tbody td .td_select_text{
+    color: #3D85DA;   
+    cursor: pointer;
+}
+table.gridtable tbody td.select{
+    color: #3D85DA;   
+    cursor: pointer;
+    text-align: center;
+}
+table.gridtable tbody td.select>div{
+    color: #3D85DA;   
+    cursor: pointer;
+    text-align: center;
+}
+table.gridtable tbody td.selected_td{   
+    text-align: center;
+    background-image: url('images/text-select.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+table.gridtable tbody td.td_delete
+, table.gridtable tbody td .td_delete 
+, table.gridtable tbody td>div.delete{
+    width: 100%;
+    height: 18px;
+    height: 1.125rem;
+    background-image: url('images/delete.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor:pointer;
+}
+table.gridtable tbody td .td_info{ 
+    width: 20px;
+    width: 1.25rem;
+    height: 20px;
+    height: 1.25rem;
+    margin-left: 5px;
+    margin-left: .3125rem;
+    margin-right: 5px;
+    margin-right: .3125rem;
+    background-image: url('images/info.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>表格Demo</title>
+<link rel="stylesheet" href="table.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="table.js"></script>
+
+</head>
+<body class="default_style">		
+	<table id="table">
+		<thead>
+			<tr>
+				<th name="column1" style="width:30%;text-align:left;" sort="true">Column1</th>
+				<th name="column2" style="width:10%">Column2</th>
+				<th name="column3" style="width:20%">Column3</th>
+				<th name="edit" style="width:20%">编辑</th>
+				<th name="delete" style="width:20%">删除</th>
+			</tr>
+		</thead>        
+	</table>
+	<script type="text/javascript">	
+        function rowOnload(content, rowIndex) {
+            content.find('td').eq(3).addClass('td_edit');
+            content.find('td').eq(4).addClass('td_delete');
+            content.find('.td_edit').click(function () {
+                alert('edit');
+            });
+            content.find('.td_delete').click(function () {
+                alert('delete');
+                //
+            });
+        }
+	var table=new Table({
+        id: 'table',
+        across: false,
+        showLine:true,
+		selectedRowChange:function(index){
+			table.setSelectedRow(index);
+		}
+        });
+        var rows = [];
+        var row1 = { column1: 'A', column2: 'B', column3: 'C' };
+        row1.edit = '';
+        row1.delelte = '';
+        row1.onload = rowOnload; 
+        rows.push(row1);
+        
+
+        var row2 = { column1: 'A', column2: 'B', column3: 'C' };
+        row2.edit = '';
+        row2.delelte = '';
+        row2.onload = rowOnload;
+        rows.push(row2);
+
+        table.display(rows);
+</script>	
+</body>
+</html>
